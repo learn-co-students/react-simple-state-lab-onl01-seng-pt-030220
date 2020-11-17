@@ -1,21 +1,21 @@
 import React from 'react'
+import Matrix from './Matrix';
 
 class Cell extends React.Component {
-    constructor() {
+    constructor(props) {
         super()
-        this.state = {
-            color: '#000'
+        this.state = { color: props.value
         }
     }
 
-    setState = () => {
-        this.state.color = '#333'
+    handleClick = () => {
+        this.setState({color: '#333'})
     }
 
     render() {
 return (
-        <div onClick={this.setState} className='cell' style={{backgroundColor: this.state.color}}  >
-            <p>testing testing</p>
+        <div onClick={this.handleClick} className='cell' style={{backgroundColor: this.state.color}}>
+            <p>?</p>
         </div>
 )}
     

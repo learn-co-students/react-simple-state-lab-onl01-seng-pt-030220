@@ -4,7 +4,7 @@ export default class Matrix extends Component {
   
   genRow = (vals) => {
     // console.log(vals)
-    return vals.map(val => <div className="cell"></div>) // replace me and render a cell component instead!
+    return vals.map(val => <Cell value={val}/>) // replace me and render a cell component instead!
   }
   
   genMatrix = () => {
@@ -20,4 +20,22 @@ export default class Matrix extends Component {
     )
   }
   
+}
+
+let mayhem = [
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+  ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00']
+]
+
+
+Matrix.defaultProps = {
+  values: mayhem
 }
